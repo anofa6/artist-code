@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  cursor: none;
+  background: url("https://img.magnific.com/free-vector/radar-screen-with-planes_1284-45666.jpg");
+  background-size: 100%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  opacity: 75%;
+}
+
+.box {
+  width: 200%;
+  height: 100%;
+  background: #ee3e32;
+  animation-name: heatmap;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #1d4877;
+}
+
+.box:hover {
+  animation-play-state: running;
+  border: 1px;
+  border-radius: 5px;
+}
+
+@keyframes heatmap {
+  0% { background-color: #1d4877; width: 120%; }
+  25% { background-color: #1b8a5a;  width: 140%; }
+  50% { background-color: #fbb021;  width: 160%; }
+  75% { background-color: #f68838;  width: 180%; }
+  100% { background-color: #ee3e32;  width: 200%; }
+}
